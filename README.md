@@ -4,13 +4,15 @@ Quiz Quartet
 Quiz Quartet was built to automate the process for generating a quiz so no developer has to be involved and write repetitive code! Check out the project at [http://quiz-generator.herokuapp.com](http://quiz-generator.herokuapp.com)
 
 ## Fork!
-This is a forked version of Vox's quiz generator. It's not totally done yet but it's functional. Experiment, use with caution. This version:
+This is a forked version of robflaherty's for of Vox's quiz generator. To quote Rob: 
+
+"It's not totally done yet but it's functional. Experiment, use with caution. This version:
 
 * Removes the hard coded references to the Vox brands' stylesheets and social usernames
 * Removes the Ruby dependencies so you can just run it as static files
 * Removes the quiz/flowchart JS and stylesheets from the generated embed code.
 
-This last change is sort of an architectural change to make the tool better suited for general, non-brand specific use. Instead of having the tool generate specific stylesheet and script file references, we can just include the CSS and JS in our application.
+This last change is sort of an architectural change to make the tool better suited for general, non-brand specific use. Instead of having the tool generate specific stylesheet and script file references, we can just include the CSS and JS in our application."
 
 [Hosted version of the tool is here](http://robflaherty.github.io/quiz-generator/)
 
