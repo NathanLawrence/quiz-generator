@@ -110,8 +110,6 @@ QuizGenerator_quiz = function() {
     }
   }
 
-  
-
   // display final score card and social media sharing
   var link = document.URL;
   var finalScore = function () {
@@ -119,14 +117,9 @@ QuizGenerator_quiz = function() {
       'scored-' + score + '-of-' + input.length,
       'Scored ' + score + ' of ' + input.length);
     trackEvent('completed', 'Quiz completed');
-    highScoreSubmit("nathan@nathanlawrence.org",10);
 
     $(".quiz-container")
-      .html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "&nbsp;out of&nbsp;" + input.length + "</p><div id='social-media'><ul><li><a class=\"fb-share\" href='http://www.facebook.com/sharer.php?u=" + link + "' target='_blank'>" + facebook + "</a></li><li><a class=\"twitter-share\" href='http://twitter.com/home?status=I scored " + score + "/" + input.length + " on this quiz " + link + "' target='_blank'>" + twitter   + "</a></li><li><a class=\"gplus-share\" href='https://plus.google.com/share?url=" + link + "' target='_blank'>" + google + "</a></li></ul></div><p>Challenge your friends!</p></div>" + "<p> <div id='high-score-div'><a class=\"high-score\" href='http://www.kbia.org/'>Click here to submit your score.</a></div></p>");
-    $(".quiz-container .high-score").click(function(){
-      highScoreSubmit(
-        window.prompt("Please enter your email so we can let you know if you win.",""),score);
-    });
+      .html("<div class='scorecard'><p>You correctly answered</p><p>" + score + "&nbsp;out of&nbsp;" + input.length + "</p><div id='social-media'><ul><li><a class=\"fb-share\" href='http://www.facebook.com/sharer.php?u=" + link + "' target='_blank'>" + facebook + "</a></li><li><a class=\"twitter-share\" href='http://twitter.com/home?status=I scored " + score + "/" + input.length + " on this quiz " + link + "' target='_blank'>" + twitter   + "</a></li><li><a class=\"gplus-share\" href='https://plus.google.com/share?url=" + link + "' target='_blank'>" + google + "</a></li></ul></div><p>Challenge your friends!</p></div>");
     $('.quiz-container .fb-share').click(function() {
       trackEvent('shared-on-fb', 'Quiz shared on Facebook');
     });
@@ -167,35 +160,5 @@ QuizGenerator_quiz = function() {
     trackEvent('loaded', 'Quiz is loaded');
     unpackQuizHack();
   });
-  
-  //The following function written by Nathan Lawrence for use at KBIA. Contact me to fix it if something goes wrong. Which it might.
-  //send a high score notification to Digital@kbia.org in house format
-  function highScoreSubmit(userEmail,userScore){
-    console.log("function called'");
-    var messageSubject = "[quiz] " + userEmail;
-    var messageContent = "Quiz Submit from " + userEmail + " user score " + userScore;
-    $.ajax({
-          type: "POST",
-          url: "https://mandrillapp.com/api/1.0/messages/send.json",
-          data: {
-            'key': 'ml0tE7xThAgrEGP1rJqtmw',
-            'message': {
-              'from_email': 'digital@kbia.org',
-              'to': [
-                  {
-                    'email': 'digital@kbia.org',
-                    'name': 'KBIA Webmaster',
-                    'type': 'to'
-                  },
-                ],
-              'autotext': 'true',
-              'subject': messageSubject,
-              'html': messageContent
-            }
-          }
-        }).done(function(response) {
-          console.log(response); // if you're into that sorta thing
-        });
-        console.log("function carried");
-  };
+
 };

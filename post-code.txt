@@ -1,0 +1,17 @@
+
+
+<script src="http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/quiz.js"></script>
+<script src="http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/flowchart.js"></script>
+
+
+</body>
+</html>
+
+----------------
+
+&lt;script src=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/quiz.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/flowchart.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;

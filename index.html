@@ -16,18 +16,16 @@
   </head>
 <body>
 
-<div class="vox-logo">
+<!--<div class="vox-logo">
   <a href="http://www.voxmedia.com/"><img src="source/images/voxlogo.png" style="width:40px;"></a>
-</div>
+</div>-->
 
 <div class="quiz-quartet">
   <h1><img src="source/images/qq.png">Quiz Quartet</h1>
 
   <div class="notice">
-    <p>This is a fork of Vox's <a href="https://github.com/voxmedia/quiz-generator">quiz generator tool</a>. Information about using this version <a href="https://github.com/nathanlawrence/quiz-generator">is here</a>.</p>
-
+    <p>This is an fork of Vox's <a href="https://github.com/voxmedia/quiz-generator">quiz generator tool</a>. This version is designed to be used in conjunction with a server which serves individual, isolated pages and generates iframe code for them to be embedded in sites which cannot support JQuery or the additional imports required to run the quiz system. For more information, contact <a href="mailto:nathan@nathanlawrence.org">Nathan@NathanLawrence.org</a>.</p>
     <p style="margin: 0;"><a href="#" id="show-instructions">Instructions</a></p>
-
   </div>
 </div>
 
@@ -37,9 +35,10 @@
 
   <h5>Instructions</h5>
   <ol>
-    <li><a href="https://github.com/nathanlawrence/quiz-generator/archive/master.zip" target="_blank">Download this zip file</a> and add quiz.js, flowchart.js, and quiz.css to your site. jQuery is required, too.</li>
-    <li>Add additional CSS to match your site styles.</li>
     <li>Follow the steps below.</li>
+    <li>Paste the embed code into a blank plain text document and save it with a <em>unique</em>, <em>descriptive</em> name, avoiding spaces or capital letters (eg. "quiz-mayday-trivia.html"). <em>Please note that while Notepad on Windows will save documents as plain text, you may need to use a third party text editor, like the free <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>.</em></li>
+    <li>Upload it to the server using the <a href="http://ec2-52-1-90-185.compute-1.amazonaws.com/universal-upload-and-embed/">included embed code generator package</a>.</li>
+    <li>Paste the generated embed code into your CMS and enjoy the quiz!</li>
   </ol>
 
 </div>
@@ -73,7 +72,7 @@
 </div>
 
 <div class="embed step">
-  <h5>3. Paste this code into the CMS</h5>
+  <h5>3. Paste this code into a new HTML document and use the <a href="http://ec2-52-1-90-185.compute-1.amazonaws.com/universal-upload-and-embed/">universal upload and embed tool</a> to create your final code.</h5>
   <textarea type="text" name="embedcode" id="embedcode" style="height: 150px; overflow:auto;"></textarea>
 </div>
 

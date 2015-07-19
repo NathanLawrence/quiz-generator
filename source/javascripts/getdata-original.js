@@ -64,8 +64,8 @@ var input;
   }
 
   function embed(input) {
-    var html = "&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;link href=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/stylesheets/quiz.css&quot; rel=&quot;stylesheet&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;script src=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>window.jQuery || document.write('&lt;script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\">&lt;&#92;/script>');&lt;/script>";
-      html += "&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; $(function(){ QuizGenerator_" + quizType + "() }); &lt;/script>&lt;script src=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/quiz.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;http://ec2-52-1-90-185.compute-1.amazonaws.com/quiz-gen-beta/source/javascripts/flowchart.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;";
+    var html = "&lt;div class='quiz-container'></div>&lt;script type='text/javascript'>window.jQuery || document.write('&lt;script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\">&lt;&#92;/script>');&lt;/script>";
+      html += "&lt;script type='text/javascript'>var input = " + JSON.stringify(input) + "; $(function(){ QuizGenerator_" + quizType + "() }); &lt;/script>";
 
     $("#embedcode").html(html);
     showPreview();
