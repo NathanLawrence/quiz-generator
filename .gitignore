@@ -17,3 +17,5 @@ source/.DS_Store
 
 /test
 source/stylesheets/.sass-cache/
+
+source/stylesheets/.DS_Store
